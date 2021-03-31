@@ -1,29 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="badges.html">NOSOTROS</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-        <li><a href="sass.html">Sass</a></li>
-      </ul>
+<div class="navbar-fixed">
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo white-text">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="white-text" href="index.html">Principal</a></li>
+                <li><a class="white-text" href="gallery.html">Galería</a></li>
+                <li><a class="white-text" href="about.html">Nosotros</a></li>
+            </ul>
+            <!-- navbar mobile, llama al menu de hamburgesa -->
+            <ul id="nav-mobile" class="sidenav teal">
+                <li><a class="white-text" href="index.html">Principal</a></li>
+                <li><a class="white-text" href="gallery.html">Galería</a></li>
+                <li><a class="white-text" href="about.html">Nosotros</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+<div class="container col s2 m4 l6 xl8">
+    <div class="divider"></div>
+    <div class="container section">
+        <h5>Sugeridos</h5>
+        <p>Los perfiles con mayor tendencia</p>
     </div>
-  </nav>
+    <div class="divider"></div>
+
+    <div class="container section">
+        <div class="row">
+            <div class="s2 m4 l6 xl8">
+                <div class="carousel carousel-slider">
+                    <a class="carousel-item" href="#one!"><img src="img/1.jpg"></a>
+                    <a class="carousel-item" href="#two!"><img src="img/2.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="img/3.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- fin del container mayor -->
+<!-- footer -->
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+                <h5 class="white-text">Información</h5>
+                <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; <a class="white-text text-lighten-3" href="http://materializecss.com">Andrés Riquelme, Roberto
+            Castillo y Sebastián Sandoval.</a>
+        </div>
+    </div>
+</footer>
 
 
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {
+            indicators: true,
+            duration: 500
+        });
+        autoplay();
+        function autoplay() {
+            $('.carousel').carousel('next');
+            setTimeout(autoplay, 2500);
+        }
+    });
 
-
-
-
-
+</script>
 
 </body>
 
