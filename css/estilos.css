@@ -1,0 +1,24 @@
+.textoJustificado {
+    text-align: justify;
+}
+
+.tituloParrafo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.contenedorFotoCarrusel {
+    overflow: hidden;
+}
+
+.fotoCarrusel {
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+}
+
+.iconColor {
+    color: #e57373;
+}
