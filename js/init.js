@@ -1,8 +1,10 @@
 (function($){
   $(function(){
     $('.sidenav').sidenav();
-    $('.carousel').carousel({indicators: true, fullwith: true, duration: 500});
+    $('.carousel').carousel({dist: 0,padding: 0,fullWidth: true,indicator: false,duration: 100,});
     $('.materialboxed').materialbox();
+    $('.fixed-action-btn').floatingActionButton();
+    $('.parallax').parallax();
     autoplay();
     function autoplay() {
         $('.carousel').carousel('next');
@@ -10,3 +12,4 @@
     }
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
