@@ -2,7 +2,7 @@
   $(function(){
     $('.sidenav').sidenav();
     $('.carousel').carousel({indicators: true, fullwith: true, duration: 500});
-
+    $('.materialboxed').materialbox();
     autoplay();
     function autoplay() {
         $('.carousel').carousel('next');
